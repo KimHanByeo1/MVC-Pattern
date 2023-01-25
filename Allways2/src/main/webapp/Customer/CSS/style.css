@@ -1,0 +1,42 @@
+/* 이미지 플로우 */
+
+#testbox {
+   overflow:hidden;
+   position:relative;
+/*    border:20px solid red; */
+   width:1497px; /* 테스트를 위한 임시 값*/
+   height:300px;
+}
+.test {
+   width:5280px; /* 보여야 하는 이미지 + 클론이미지 전체 합 */
+   height:100%;
+   display:flex;
+   flex-wrap:nowrap;
+   animation: bannermove 20s linear infinite;
+}
+
+   
+.test > div {
+   flex:0 0 auto;
+   height:300px;
+   line-height:300px;
+   background-color:#369;
+   vertical-align:top;
+   text-align:center;
+}
+.img {
+   width:300px;
+   height:300px;
+}
+.test > .clone {
+   background-color:green;
+   opacity:.4;
+}
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
